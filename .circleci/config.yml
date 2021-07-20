@@ -25,9 +25,10 @@ jobs:
           MYSQL_PASSWORD: 'forge'
 
     steps:
+      - setup_remote_docker
       - checkout
       - run:
-          name: Install MySQL driver
+          name: Install sqlite3 driver
           command: |
             sudo docker-php-ext-install pdo_sqlite3
             sudo docker-php-ext-enable pdo_sqlite3
