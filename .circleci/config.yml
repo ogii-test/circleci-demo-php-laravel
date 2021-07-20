@@ -23,9 +23,9 @@ jobs:
           name: Install sqlite3 driver
           command: |
             sudo apt-get update -y
-            sudo apt-get install -y sqlite3 libsqlite3-dev
-            sudo docker-php-ext-install pdo_sqlite3
-            sudo docker-php-ext-enable pdo_sqlite3
+            sudo apt-get install -y sqlite
+            sudo docker-php-ext-install pdo_sqlite
+            sudo docker-php-ext-enable pdo_sqlite
       - run:
           name: Install Node
           command: |
